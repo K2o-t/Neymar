@@ -1,0 +1,411 @@
+/* ============================================
+   PALMARÈS PAGE - STYLES SPÉCIFIQUES
+   ============================================ */
+
+/* Hero Section */
+.hero-palmares {
+    height: 90vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.hero-overlay-palmares {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.3) 100%);
+    z-index: 1;
+}
+
+.hero-image-palmares {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center 30%;
+    animation: zoomIn 20s ease infinite alternate;
+}
+
+.hero-content-palmares {
+    position: relative;
+    z-index: 2;
+    color: white;
+}
+
+.hero-pre-title-palmares {
+    font-size: 1rem;
+    letter-spacing: 8px;
+    color: #FFD700;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeInUp 1s ease forwards;
+}
+
+.hero-title-palmares {
+    margin-bottom: 20px;
+}
+
+.title-line-palmares {
+    display: block;
+    font-family: 'Anton', sans-serif;
+    font-size: 8vw;
+    line-height: 0.9;
+    text-transform: uppercase;
+    opacity: 0;
+    transform: translateY(100px);
+    animation: slideUp 0.8s ease forwards;
+}
+
+.title-line-palmares:nth-child(1) { animation-delay: 0.2s; }
+.title-line-palmares:nth-child(2) { animation-delay: 0.4s; }
+
+.hero-description-palmares {
+    font-size: 1.2rem;
+    opacity: 0.8;
+    letter-spacing: 2px;
+    opacity: 0;
+    animation: fadeInUp 1s ease 0.6s forwards;
+}
+
+.scroll-indicator-palmares {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    text-align: center;
+}
+
+.scroll-indicator-palmares span {
+    display: block;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    opacity: 0.5;
+    color: white;
+}
+
+.scroll-line-palmares {
+    width: 2px;
+    height: 60px;
+    background: linear-gradient(135deg, #FFD700, #FFA500);
+    margin: 0 auto;
+    animation: scrollDown 2s ease infinite;
+}
+
+/* Key Numbers Section */
+.key-numbers-section {
+    padding: 60px 0;
+    background: #050505;
+    border-bottom: 1px solid rgba(255,215,0,0.1);
+}
+
+.key-numbers-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.key-number-item {
+    text-align: center;
+    padding: 20px;
+    background: rgba(255,255,255,0.02);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.key-number-item:hover {
+    background: rgba(255,215,0,0.05);
+    transform: translateY(-5px);
+}
+
+.key-number {
+    display: block;
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #FFD700;
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+.key-label {
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    opacity: 0.7;
+}
+
+/* Club Trophies Section */
+.club-trophies-section {
+    padding: 80px 0;
+    background: #0a0a0a;
+}
+
+.club-trophy-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    margin-bottom: 100px;
+    align-items: center;
+}
+
+.club-trophy-block.reverse {
+    direction: rtl;
+}
+
+.club-trophy-block.reverse .club-trophy-content {
+    direction: ltr;
+}
+
+.club-trophy-image {
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+
+.club-trophy-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    transition: transform 0.8s ease;
+    display: block;
+}
+
+.club-trophy-image:hover img {
+    transform: scale(1.05);
+}
+
+.club-trophy-header {
+    margin-bottom: 30px;
+    border-bottom: 2px solid rgba(255,215,0,0.3);
+    padding-bottom: 15px;
+}
+
+.club-trophy-title {
+    font-size: 2.5rem;
+    font-family: 'Anton', sans-serif;
+    color: #FFD700;
+    margin-bottom: 5px;
+}
+
+.club-trophy-years {
+    font-size: 1rem;
+    opacity: 0.6;
+    letter-spacing: 1px;
+}
+
+.club-trophy-list {
+    margin-bottom: 30px;
+}
+
+.trophy-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.trophy-icon {
+    font-size: 1.5rem;
+    margin-right: 15px;
+    width: 30px;
+}
+
+.trophy-name {
+    flex: 1;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.trophy-count {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #FFD700;
+}
+
+.club-trophy-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-top: 2px solid #FFD700;
+    margin-top: 20px;
+}
+
+.total-label {
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    opacity: 0.8;
+}
+
+.total-number {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #FFD700;
+}
+
+/* Individual Trophies Section */
+.individual-trophies-section {
+    padding: 80px 0;
+    background: #050505;
+}
+
+.individual-trophies-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.individual-trophy-card {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    aspect-ratio: 1;
+    cursor: pointer;
+}
+
+.individual-trophy-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s ease;
+}
+
+.individual-trophy-card:hover img {
+    transform: scale(1.1);
+}
+
+.individual-trophy-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+    color: white;
+    transform: translateY(100%);
+    transition: transform 0.4s ease;
+}
+
+.individual-trophy-card:hover .individual-trophy-info {
+    transform: translateY(0);
+}
+
+.individual-trophy-info h4 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    color: #FFD700;
+}
+
+.individual-trophy-info p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scrollDown {
+    0% {
+        transform: scaleY(0);
+        transform-origin: top;
+    }
+    50% {
+        transform: scaleY(1);
+        transform-origin: top;
+    }
+    50.1% {
+        transform-origin: bottom;
+    }
+    100% {
+        transform: scaleY(0);
+        transform-origin: bottom;
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.1);
+    }
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .title-line-palmares {
+        font-size: 10vw;
+    }
+    
+    .individual-trophies-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .key-numbers-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .club-trophy-block {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        margin-bottom: 60px;
+    }
+    
+    .club-trophy-block.reverse {
+        direction: ltr;
+    }
+    
+    .club-trophy-image img {
+        height: 300px;
+    }
+    
+    .club-trophy-title {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .key-numbers-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .individual-trophies-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .trophy-item {
+        flex-wrap: wrap;
+    }
+    
+    .trophy-name {
+        font-size: 1rem;
+    }
+}
